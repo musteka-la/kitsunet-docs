@@ -29,13 +29,9 @@ The KSN slice exchange protocol uses these properties to track slices over time 
 
 #### Track slices
 
-`kitsunet:slice:<path>-<depth>` subscribe to a slice group
+`kitsunet:slice:<path>-<depth>` subscribe to a slice group. This enables the client to track a particular slice. It will trigger a new slice every time a block is generated.
 
-This enables the client to track a particular slice. It will trigger a new slice every time a block is generated.
-
-`kitsunet:slice:<path>-<depth>-<root>` subscribe to a specific slice
-
-This enables the client to track a slice for a specific state root, it will only get updates for that slice, this might trigger on each block update, but it will not change across block updates.
+`kitsunet:slice:<path>-<depth>-<root>` subscribe to a specific slice. This enables the client to track a slice for a specific state root, it will only get updates for that slice, this might trigger on each block update, but it will not change across block updates.
 
 #### Request slices
 
