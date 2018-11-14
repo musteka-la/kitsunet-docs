@@ -1,6 +1,6 @@
-# Kitsunet architecture
+# Kitsunet architecture overview
 
-> This document lays out the architecture of the kitsunet client and network.
+> This document lays out the architecture of the kitsunet client and network. This is a high level overview intended as a starting point to understand the KSN network.
 
 Kitsunet aims at distributing the Ethereum state trie. The current architecture consists of a p2p network where peers collaborate on serving the Ethereum trie. This is accomplished by slicing the trie such that pieces of it can be distributed across many nodes in the kitsunet p2p network. Each node is in charge of serving only a subset of the slices. This allows splitting the current state which is in the order of tens of gigabytes for a regular node (and hundreds or thousands of gigabytes for historic nodes) across many nodes, which in turn allows using the Ethereum blockchain on resource (storage) constrained devices, such as browsers and IoT devices.
 
